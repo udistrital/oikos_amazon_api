@@ -22,7 +22,7 @@ func init() {
 func TestEspaciosHuerfanos(t *testing.T) {
 	query := "Id:1"
 	data := strings.NewReader(query)
-	r, _ := http.NewRequest("GET", "http://10.20.0.254/oikos_api/v1/espacio_fisico/EspacioFisicosHuerfanos/", data)
+	r, _ := http.NewRequest("GET", "http://10.20.0.254/oikos_amazon_api/v1/espacio_fisico/EspacioFisicosHuerfanos/", data)
 	w := httptest.NewRecorder()
 	beego.BeeApp.Handlers.ServeHTTP(w, r)
 
@@ -40,7 +40,7 @@ func TestEspaciosHuerfanos(t *testing.T) {
 }
 
 func TestArbolDependencias(t *testing.T) {
-	r, _ := http.NewRequest("GET", "http://10.20.0.254/oikos_api/v1/dependencia_padre/ArbolDependencias/", nil)
+	r, _ := http.NewRequest("GET", "http://10.20.0.254/oikos_amazon_api/v1/dependencia_padre/ArbolDependencias/", nil)
 	w := httptest.NewRecorder()
 	beego.BeeApp.Handlers.ServeHTTP(w, r)
 

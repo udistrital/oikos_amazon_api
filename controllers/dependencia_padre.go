@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/udistrital/oikos_api/models"
+	"github.com/udistrital/oikos_amazon_api/models"
 
 	"github.com/astaxie/beego"
 )

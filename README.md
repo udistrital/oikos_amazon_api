@@ -1,1 +1,1 @@
-# oikos_api
+# oikos_amazon_api

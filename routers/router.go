@@ -9,7 +9,7 @@ package routers
 
 import (
 	"github.com/astaxie/beego/plugins/cors"
-	"github.com/udistrital/oikos_api/controllers"
+	"github.com/udistrital/oikos_amazon_api/controllers"
 
 	"github.com/astaxie/beego"
 )

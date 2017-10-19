@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "github.com/udistrital/oikos_api/routers"
+	_ "github.com/udistrital/oikos_amazon_api/routers"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
