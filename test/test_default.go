@@ -3,18 +3,18 @@ package test
 import (
 	"net/http"
 	"net/http/httptest"
-	"testing"
+	"path/filepath"
 	"runtime"
 	"strings"
-	"path/filepath"
-	_ "github.com/udistrital/administrativa_mid_api/routers"
+	"testing"
+
 	"github.com/astaxie/beego"
 	. "github.com/smartystreets/goconvey/convey"
 )
 
 func init() {
 	_, file, _, _ := runtime.Caller(1)
-	apppath, _ := filepath.Abs(filepath.Dir(filepath.Join(file, ".." + string(filepath.Separator))))
+	apppath, _ := filepath.Abs(filepath.Dir(filepath.Join(file, ".."+string(filepath.Separator))))
 	beego.TestBeegoInit(apppath)
 }
 
@@ -27,9 +27,9 @@ func TestContratoPersona(t *testing.T) {
 
 	beego.Trace("testing", "TestContratoPersona", "Code[%d]\n%s", w.Code, w.Body.String())
 
-		Convey("Asunto: Envio y recibido de datos a contrato persona\n", t, func() {
+	Convey("Asunto: Envio y recibido de datos a contrato persona\n", t, func() {
 		Convey("El codigo de estado debe ser 200", func() {
-				So(w.Code, ShouldEqual, 200)
+			So(w.Code, ShouldEqual, 200)
 		})
 
 		Convey("El resultado no deberia ser vacio", func() {
